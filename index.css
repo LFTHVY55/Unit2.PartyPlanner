@@ -1,0 +1,26 @@
+body {
+    font-family: sans-serif;
+    background-color: dimgray;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .party-list {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin
+  }
