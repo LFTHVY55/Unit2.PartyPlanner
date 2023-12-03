@@ -1,41 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
-<meta name="viewport"content="width=device-width, initial-scale=1.0"> 
-<title>Party Planner</title>
-
+<meta name="viewport"content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="index.css">
+    
+<title>Party Planner</title>
+<style>
+    .party-list {
+        margin-top: 20px;
+    }
+
+    .delete-button {
+        background-color: blue;
+        color: rgb(247, 245, 245);
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
 </head>
 <body>
-  <h1>Party Planner</h1>
+    <div class="container">
+        <h1>Party Planner</h1>
 
-  <div class="party-list">
-    <h2>Upcoming Parties</h2>
-    <ul id="party-list-items"></ul>
-  </div>
+        <table class="table table-striped party-list">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Date</th>
 
-  <form id="add-party-form">
-    <h2>Add a New Party</h2>
-    <label for="party-name">Party Name:</label>
-    <input type="text" id="party-name" name="partyName" required>
-    <br>
-    <label for="party-date">Party Date:</label>
-    <input type="date" id="party-date" name="partyDate" required>
-    <br>
-    <label for="party-time">Party Time:</label>
-    <input type="time" id="party-time" name="partyTime" required>
-    <br>
-    <label for="party-location">Party Location:</label>
-    <input type="text" id="party-location" name="partyLocation" required>
-    <br>
-    <label for="party-description">Party Description:</label>
-    <textarea id="party-description" name="partyDescription" rows="4" cols="50" required></textarea>
-    <br>
-    <button type="submit">Add Party</button>
-  </form>
+                    
+<th scope="col">Time</th>               
+<th scope="col">Location</th>                
+<th scope="col">Description</th>                  
+<th scope="col"></th>               
+</tr>           
+</thead>         
+<tbody>
+                <tr>
+                    <td>Birthday Bash</td>
+                    <td>2023-12-15</td>
+                    <td>7:00 PM</td>
+                    <td>123 Main Street</td>
+                    <td>Celebrate your birthday with friends and family!</td>
+                    <td><button class="delete-button">Delete</button></td>
+                </tr>
+                <tr>
+                    <td>Holiday Party</td>
+                    <td>2023-12-22</td>
+                    <td>8:00 PM</td>
+                    <td>456 Elm Street</td>
+                    <td>Join us for a festive holiday party!</td>
+                    <td><button class="delete-button">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
 
-  <script src="index.js"></script>
-</body>
-</html>
+        <h2>Add a New Party</h2>
+        <form id="newPartyForm" class="row g-3">
+            <div class="col-md-6">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+
+            <div class="col-md-4">
+                <label for="date" class="form-label">Date:</label>
+                <input type="date" id="date" name="date" class="form-control"required>
+          
+</div>         
+<div class="col-md-2">             
+<label for="time"class="form-label">Time:</label>              
+<input type="time" id="time" name="time" class="form-control" required>
+            </div>
+
+            <div class="col-12">
+                <label for="location" class="form-label">Location:</label>
+                <input type="text" id="location" name="location"
+ 
+class="form-control"required>        
+</div>      
+<div class="col-12">                
+<label for="description"class="form-label">Description:</label>
+  <form>
+ 
+    <div class="col-12">
+        <button class="btn btn-primary" type="submit">Add Party</button>
+    </div>
+</form>           
+<textarea id="description"name="description"class="form-control"rows="3"required></textarea>
+         
+</div>  
+
+
+
+
+
+        <script src= "index.js"></script>
+        
